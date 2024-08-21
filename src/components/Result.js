@@ -27,6 +27,18 @@ const determineBrainType = (responses) => {
   const healthHabitsPercentage = (healthHabitsScore / 65) * 100;
 
   // Logic to determine brain type based on score ranges
+  const isHighlyBalanced =
+    Math.abs(memoryPercentage - executiveFunctionPercentage) <= 5 &&
+    Math.abs(executiveFunctionPercentage - attentionPercentage) <= 5 &&
+    Math.abs(attentionPercentage - emotionalRegulationPercentage) <= 5 &&
+    Math.abs(emotionalRegulationPercentage - problemSolvingPercentage) <= 5 &&
+    Math.abs(problemSolvingPercentage - creativityPercentage) <= 5 &&
+    Math.abs(creativityPercentage - healthHabitsPercentage) <= 5;
+
+  if (isHighlyBalanced) {
+    return "Brain Type 1: Highly Balanced Brain";
+  }
+
   if (memoryPercentage > 75 && executiveFunctionPercentage > 75) {
     return "Brain Type 2: Strong Memory and Executive Function";
   } else if (creativityPercentage > 75 && problemSolvingPercentage > 75) {
