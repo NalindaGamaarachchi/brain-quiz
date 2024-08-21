@@ -6,7 +6,7 @@ import Result from "./components/Result";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/brain-quiz">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/quiz" element={<Quiz />} />
