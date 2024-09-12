@@ -3,91 +3,136 @@ import { useLocation, useNavigate } from "react-router-dom";
 import "../App.css";
 
 const determineBrainType = (responses) => {
-  const countSevereResponsesInRange = (start, end) => {
-    return responses.slice(start, end).filter((val) => val >= 4).length;
+  // Helper function to calculate total score in each question range
+  const calculateSectionScore = (start, end) => {
+    return responses.slice(start, end).reduce((sum, val) => sum + val, 0);
   };
 
-  const countModerateResponsesInRange = (start, end) => {
-    return responses.slice(start, end).filter((val) => val >= 3).length;
-  };
+  // Calculate the total scores for each section
+  const flexibleThinkingScore = calculateSectionScore(0, 10); // Q1-10
+  const focusImpulseControlScore = calculateSectionScore(10, 20); // Q11-20
+  const moodConcernsScore = calculateSectionScore(20, 30); // Q21-30
+  const stressAnxietyScore = calculateSectionScore(30, 39); // Q31-39
 
-  const flexibleThinkingSevere = countSevereResponsesInRange(0, 10);
-  const focusImpulseControlSevere = countSevereResponsesInRange(10, 20);
-  const moodConcernsSevere = countSevereResponsesInRange(20, 30);
-  const stressAnxietySevere = countSevereResponsesInRange(30, 39);
+  // Define thresholds for brain types based on weighted scores
+  const brainTypeScores = [
+    {
+      type: "Brain Type 1: Compulsive",
+      thresholds: { flexibleThinking: 25 },
+    },
+    {
+      type: "Brain Type 2: Impulsive",
+      thresholds: { focusImpulseControl: 25 },
+    },
+    {
+      type: "Brain Type 3: SAD",
+      thresholds: { moodConcerns: 25 },
+    },
+    {
+      type: "Brain Type 4: Anxious",
+      thresholds: { stressAnxiety: 25 },
+    },
+    {
+      type: "Brain Type 5: Impulsive-Compulsive",
+      thresholds: { flexibleThinking: 20, focusImpulseControl: 20 },
+    },
+    {
+      type: "Brain Type 6: Compulsive-SAD",
+      thresholds: { flexibleThinking: 20, moodConcerns: 20 },
+    },
+    {
+      type: "Brain Type 7: Compulsive-Anxious",
+      thresholds: { flexibleThinking: 20, stressAnxiety: 20 },
+    },
+    {
+      type: "Brain Type 8: Compulsive-SAD-Anxious",
+      thresholds: {
+        flexibleThinking: 15,
+        moodConcerns: 15,
+        stressAnxiety: 15,
+      },
+    },
+    {
+      type: "Brain Type 9: Impulsive-SAD",
+      thresholds: { focusImpulseControl: 20, moodConcerns: 20 },
+    },
+    {
+      type: "Brain Type 10: Impulsive-Anxious",
+      thresholds: { focusImpulseControl: 20, stressAnxiety: 20 },
+    },
+    {
+      type: "Brain Type 11: Impulsive-SAD-Anxious",
+      thresholds: {
+        focusImpulseControl: 15,
+        moodConcerns: 15,
+        stressAnxiety: 15,
+      },
+    },
+    {
+      type: "Brain Type 12: Impulsive-Compulsive-SAD",
+      thresholds: {
+        flexibleThinking: 15,
+        focusImpulseControl: 15,
+        moodConcerns: 15,
+      },
+    },
+    {
+      type: "Brain Type 13: Impulsive-Compulsive-Anxious",
+      thresholds: {
+        flexibleThinking: 15,
+        focusImpulseControl: 15,
+        stressAnxiety: 15,
+      },
+    },
+    {
+      type: "Brain Type 14: Impulsive-Compulsive-SAD-Anxious",
+      thresholds: {
+        flexibleThinking: 10,
+        focusImpulseControl: 10,
+        moodConcerns: 10,
+        stressAnxiety: 10,
+      },
+    },
+    {
+      type: "Brain Type 15: SAD-Anxious",
+      thresholds: { moodConcerns: 20, stressAnxiety: 20 },
+    },
+  ];
 
-  const flexibleThinkingModerate = countModerateResponsesInRange(0, 10);
-  const focusImpulseControlModerate = countModerateResponsesInRange(10, 20);
-  const moodConcernsModerate = countModerateResponsesInRange(20, 30);
-  const stressAnxietyModerate = countModerateResponsesInRange(30, 39);
+  // Compare the user's scores to the thresholds to determine the closest match
+  let bestMatch = "Brain Type 16: No Specific Type";
+  let highestScore = 0;
 
-  // High priority combinations (3 or more severe responses)
-  if (
-    flexibleThinkingSevere >= 3 &&
-    focusImpulseControlSevere >= 3 &&
-    moodConcernsSevere >= 3 &&
-    stressAnxietySevere >= 3
-  ) {
-    return "Brain Type 14: Impulsive-Compulsive-SAD-Anxious (High Severity)";
-  }
-  if (
-    flexibleThinkingSevere >= 3 &&
-    focusImpulseControlSevere >= 3 &&
-    stressAnxietySevere >= 3
-  ) {
-    return "Brain Type 13: Impulsive-Compulsive-Anxious (High Severity)";
-  }
-  if (
-    flexibleThinkingSevere >= 3 &&
-    focusImpulseControlSevere >= 3 &&
-    moodConcernsSevere >= 3
-  ) {
-    return "Brain Type 12: Impulsive-Compulsive-SAD (High Severity)";
-  }
-  if (
-    focusImpulseControlSevere >= 3 &&
-    moodConcernsSevere >= 3 &&
-    stressAnxietySevere >= 3
-  ) {
-    return "Brain Type 11: Impulsive-SAD-Anxious (High Severity)";
-  }
+  brainTypeScores.forEach((brainType) => {
+    const { thresholds, type } = brainType;
+    let confidenceScore = 0;
 
-  // Moderate combinations (2 or more moderate responses)
-  if (
-    flexibleThinkingModerate >= 2 &&
-    moodConcernsModerate >= 2 &&
-    stressAnxietyModerate >= 2
-  ) {
-    return "Brain Type 8: Compulsive-SAD-Anxious (Moderate Severity)";
-  }
-  if (flexibleThinkingModerate >= 2 && stressAnxietyModerate >= 2) {
-    return "Brain Type 7: Compulsive-Anxious (Moderate Severity)";
-  }
-  if (focusImpulseControlModerate >= 2 && stressAnxietyModerate >= 2) {
-    return "Brain Type 10: Impulsive-Anxious (Moderate Severity)";
-  }
-  if (focusImpulseControlModerate >= 2 && moodConcernsModerate >= 2) {
-    return "Brain Type 9: Impulsive-SAD (Moderate Severity)";
-  }
+    if (
+      thresholds.flexibleThinking &&
+      flexibleThinkingScore >= thresholds.flexibleThinking
+    )
+      confidenceScore += 1;
+    if (
+      thresholds.focusImpulseControl &&
+      focusImpulseControlScore >= thresholds.focusImpulseControl
+    )
+      confidenceScore += 1;
+    if (thresholds.moodConcerns && moodConcernsScore >= thresholds.moodConcerns)
+      confidenceScore += 1;
+    if (
+      thresholds.stressAnxiety &&
+      stressAnxietyScore >= thresholds.stressAnxiety
+    )
+      confidenceScore += 1;
 
-  // Single category conditions
-  if (flexibleThinkingModerate >= 2) {
-    return "Brain Type 1: Compulsive (Moderate)";
-  }
-  if (focusImpulseControlModerate >= 2) {
-    return "Brain Type 2: Impulsive (Moderate)";
-  }
-  if (moodConcernsModerate >= 2) {
-    return "Brain Type 3: SAD (Moderate)";
-  }
-  if (stressAnxietyModerate >= 2) {
-    return "Brain Type 4: Anxious (Moderate)";
-  }
+    if (confidenceScore > highestScore) {
+      highestScore = confidenceScore;
+      bestMatch = type;
+    }
+  });
 
-  // Default type if none of the conditions are met
-  return "Brain Type 16: No Specific Type";
+  return bestMatch;
 };
-
 
 const Result = () => {
   const location = useLocation();
@@ -98,7 +143,7 @@ const Result = () => {
 
   // Calculate the total score and convert it to a percentage
   const totalScore = responses.reduce((a, b) => a + b, 0);
-  const maxScore = 38 * 5;
+  const maxScore = 39 * 5;
   const scorePercentage = Math.round((totalScore / maxScore) * 100);
 
   return (
