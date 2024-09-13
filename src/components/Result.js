@@ -2,69 +2,162 @@ import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import "../App.css";
 
-// Define brain type descriptions based on the PDF
-const brainTypeDescriptions = {
-  "Brain Type 1: Compulsive": `
-    People with this brain type have increased activity in the front part of the brain, particularly in the anterior cingulate gyrus. 
-    They tend to have trouble shifting attention, get stuck on worrisome or anxious thoughts, and struggle with cognitive inflexibility.`,
-
-  "Brain Type 2: Impulsive": `
-    Impulsive individuals often have decreased activity in the prefrontal cortex (PFC), associated with low dopamine levels. 
-    They struggle with controlling their behavior, attention span, and tend to be disorganized or impulsive.`,
-
-  "Brain Type 3: SAD": `
-    This type is linked to mood concerns and often shows increased activity in the limbic areas of the brain. 
-    People may struggle with feelings of sadness, depression, low self-esteem, and may experience physical symptoms such as fatigue or pain.`,
-
-  "Brain Type 4: Anxious": `
-    Anxious individuals tend to have increased activity in the basal ganglia, associated with feelings of fear, tension, and nervousness. 
-    They often experience physical symptoms like muscle tension, headaches, or palpitations.`,
-
-  "Brain Type 5: Impulsive-Compulsive": `
-    This type combines both impulsive and compulsive characteristics, with increased anterior cingulate gyrus activity and decreased PFC activity. 
-    People with this type may struggle with controlling both their behavior and their thoughts.`,
-
-  "Brain Type 6: Compulsive-SAD": `
-    A combination of compulsive and mood-related tendencies, with increased anterior cingulate and limbic system activity. 
-    These individuals often get stuck on anxious or depressive thoughts and may have low self-esteem or feelings of hopelessness.`,
-
-  "Brain Type 7: Compulsive-Anxious": `
-    This type combines compulsive and anxious characteristics, often showing increased anterior cingulate gyrus and basal ganglia activity. 
-    They tend to worry excessively and may have trouble letting go of fearful thoughts.`,
-
-  "Brain Type 8: Compulsive-SAD-Anxious": `
-    This type exhibits a mix of compulsive, sad, and anxious traits. They may struggle with shifting their attention and get stuck in worrisome, depressive, or anxious thoughts.`,
-
-  "Brain Type 9: Impulsive-SAD": `
-    A combination of impulsive behavior and mood concerns, characterized by low activity in the PFC and increased activity in the limbic areas. 
-    Individuals may feel sadness or low self-esteem while struggling with impulse control.`,
-
-  "Brain Type 10: Impulsive-Anxious": `
-    Impulsive behavior combined with anxiety, characterized by low dopamine levels and overactivity in the basal ganglia. 
-    Individuals may feel tense or nervous and struggle with controlling impulses.`,
-
-  "Brain Type 11: Impulsive-SAD-Anxious": `
-    A combination of impulsive, sad, and anxious traits. People with this type struggle with controlling behavior and may feel anxious, sad, or depressed.`,
-
-  "Brain Type 12: Impulsive-Compulsive-SAD": `
-    People with this type have a combination of impulsive, compulsive, and mood-related traits. 
-    They may get stuck on compulsive thoughts while struggling with feelings of sadness or low impulse control.`,
-
-  "Brain Type 13: Impulsive-Compulsive-Anxious": `
-    This type shows a mix of impulsive, compulsive, and anxious behavior. 
-    These individuals often struggle with controlling their thoughts and behavior, especially under stress.`,
-
-  "Brain Type 14: Impulsive-Compulsive-SAD-Anxious": `
-    A complex brain type showing characteristics of impulsivity, compulsivity, mood issues, and anxiety. 
-    People with this type often struggle with controlling both thoughts and behavior while feeling anxious or sad.`,
-
-  "Brain Type 15: SAD-Anxious": `
-    Individuals with this type experience a combination of mood-related concerns and anxiety. 
-    They may feel depressed or anxious, and often experience physical symptoms like muscle tension or fatigue.`,
-
-  "Brain Type 16: No Specific Type": `
-    No specific brain type identified, but this may suggest the individual does not show significant tendencies in any particular category. 
-    It might be useful to re-evaluate the answers with someone who knows the individual well.`,
+// Define brain type descriptions and improvements based on the PDF
+const brainTypeDetails = {
+  "Brain Type 1: Compulsive": {
+    details: [
+      "Struggle with cognitive inflexibility and getting stuck on thoughts.",
+      "Trouble shifting attention and seeing options.",
+    ],
+    improvements: ["Intense exercise.", "Higher complex carbohydrate diet."],
+  },
+  "Brain Type 2: Impulsive": {
+    details: [
+      "Decreased activity in the prefrontal cortex leading to impulsivity.",
+      "Struggle with controlling behavior, attention, and focus.",
+    ],
+    improvements: ["Structured goal setting.", "High-quality protein diet."],
+  },
+  "Brain Type 3: SAD": {
+    details: [
+      "Increased activity in the deep limbic system leading to feelings of sadness.",
+      "Tendency to use food or substances to medicate sadness.",
+    ],
+    improvements: [
+      "Learn how to kill ANTs (automatic negative thoughts).",
+      "Balanced diet with protein and complex carbohydrates.",
+    ],
+  },
+  "Brain Type 4: Anxious": {
+    details: [
+      "Increased activity in the basal ganglia, causing anxiety and tension.",
+      "Physical symptoms like muscle tension and headaches.",
+    ],
+    improvements: [
+      "Meditation and diaphragmatic breathing.",
+      "Supplements like GABA and magnesium.",
+    ],
+  },
+  "Brain Type 5: Impulsive-Compulsive": {
+    details: [
+      "Combination of impulsive and compulsive traits, with struggles in behavior control.",
+      "Tend to have issues controlling thoughts and behavior.",
+    ],
+    improvements: [
+      "Structured goal setting.",
+      "Supplements like serotonin and dopamine boosters.",
+    ],
+  },
+  "Brain Type 6: Compulsive-SAD": {
+    details: [
+      "Compulsive tendencies with feelings of sadness and low self-esteem.",
+      "Get stuck on depressive or anxious thoughts.",
+    ],
+    improvements: [
+      "Kill ANTs (automatic negative thoughts).",
+      "Intense exercise and serotonin boosters.",
+    ],
+  },
+  "Brain Type 7: Compulsive-Anxious": {
+    details: [
+      "Combination of anxiety and compulsive traits.",
+      "Overactivity in the basal ganglia leads to excessive worry.",
+    ],
+    improvements: [
+      "Meditation and hypnosis.",
+      "Supplements like serotonin and GABA boosters.",
+    ],
+  },
+  "Brain Type 8: Compulsive-SAD-Anxious": {
+    details: [
+      "Combination of compulsive, sad, and anxious traits.",
+      "Struggle with cognitive inflexibility and worrisome thoughts.",
+    ],
+    improvements: [
+      "Kill ANTs (automatic negative thoughts).",
+      "Supplements to boost serotonin, dopamine, and GABA.",
+    ],
+  },
+  "Brain Type 9: Impulsive-SAD": {
+    details: [
+      "Combination of impulsivity and mood concerns.",
+      "Struggle with impulse control and feelings of sadness.",
+    ],
+    improvements: [
+      "Structured goal setting.",
+      "Supplements like green tea and SAMe.",
+    ],
+  },
+  "Brain Type 10: Impulsive-Anxious": {
+    details: [
+      "Combination of impulsive behavior and anxiety.",
+      "Experience physical symptoms like muscle tension and headaches.",
+    ],
+    improvements: [
+      "Meditation and diaphragmatic breathing.",
+      "Supplements to boost dopamine and GABA.",
+    ],
+  },
+  "Brain Type 11: Impulsive-SAD-Anxious": {
+    details: [
+      "Combination of impulsive behavior, sadness, and anxiety.",
+      "Struggle with controlling behavior and mood.",
+    ],
+    improvements: [
+      "Structured goal setting.",
+      "Supplements like green tea and GABA.",
+    ],
+  },
+  "Brain Type 12: Impulsive-Compulsive-SAD": {
+    details: [
+      "Combination of impulsive, compulsive, and sad traits.",
+      "Struggle with shifting attention and getting stuck on negative thoughts.",
+    ],
+    improvements: [
+      "Structured goal setting.",
+      "Supplements like green tea and 5HTP.",
+    ],
+  },
+  "Brain Type 13: Impulsive-Compulsive-Anxious": {
+    details: [
+      "Combination of impulsive, compulsive, and anxious traits.",
+      "Struggle with controlling thoughts and behaviors.",
+    ],
+    improvements: [
+      "Meditation and diaphragmatic breathing.",
+      "Supplements like green tea and saffron.",
+    ],
+  },
+  "Brain Type 14: Impulsive-Compulsive-SAD-Anxious": {
+    details: [
+      "Complex mix of impulsive, compulsive, sad, and anxious traits.",
+      "Struggle with both thought and behavior control.",
+    ],
+    improvements: [
+      "Structured goal setting.",
+      "Supplements like 5HTP and GABA.",
+    ],
+  },
+  "Brain Type 15: SAD-Anxious": {
+    details: [
+      "Combination of mood-related concerns and anxiety.",
+      "Feelings of depression and anxiety with physical symptoms.",
+    ],
+    improvements: [
+      "Kill ANTs (automatic negative thoughts).",
+      "Supplements like SAMe and GABA.",
+    ],
+  },
+  "Brain Type 16: No Specific Type": {
+    details: [
+      "No specific brain type identified due to low tendencies.",
+      "Consider reassessing the answers or reviewing with someone close.",
+    ],
+    improvements: [
+      "Follow general brain health improvement strategies.",
+      "Balanced diet and exercise for overall brain health.",
+    ],
+  },
 };
 
 const determineBrainType = (responses) => {
@@ -79,138 +172,74 @@ const determineBrainType = (responses) => {
   const moodConcernsScore = calculateSectionScore(20, 30); // Q21-30
   const stressAnxietyScore = calculateSectionScore(30, 39); // Q31-39
 
-  // Define thresholds for brain types based on weighted scores
-  const brainTypeScores = [
-    {
-      type: "Brain Type 1: Compulsive",
-      thresholds: { flexibleThinking: 25 },
-    },
-    {
-      type: "Brain Type 2: Impulsive",
-      thresholds: { focusImpulseControl: 25 },
-    },
-    {
-      type: "Brain Type 3: SAD",
-      thresholds: { moodConcerns: 25 },
-    },
-    {
-      type: "Brain Type 4: Anxious",
-      thresholds: { stressAnxiety: 25 },
-    },
-    {
-      type: "Brain Type 5: Impulsive-Compulsive",
-      thresholds: { flexibleThinking: 20, focusImpulseControl: 20 },
-    },
-    {
-      type: "Brain Type 6: Compulsive-SAD",
-      thresholds: { flexibleThinking: 20, moodConcerns: 20 },
-    },
-    {
-      type: "Brain Type 7: Compulsive-Anxious",
-      thresholds: { flexibleThinking: 20, stressAnxiety: 20 },
-    },
-    {
-      type: "Brain Type 8: Compulsive-SAD-Anxious",
-      thresholds: {
-        flexibleThinking: 15,
-        moodConcerns: 15,
-        stressAnxiety: 15,
-      },
-    },
-    {
-      type: "Brain Type 9: Impulsive-SAD",
-      thresholds: { focusImpulseControl: 20, moodConcerns: 20 },
-    },
-    {
-      type: "Brain Type 10: Impulsive-Anxious",
-      thresholds: { focusImpulseControl: 20, stressAnxiety: 20 },
-    },
-    {
-      type: "Brain Type 11: Impulsive-SAD-Anxious",
-      thresholds: {
-        focusImpulseControl: 15,
-        moodConcerns: 15,
-        stressAnxiety: 15,
-      },
-    },
-    {
-      type: "Brain Type 12: Impulsive-Compulsive-SAD",
-      thresholds: {
-        flexibleThinking: 15,
-        focusImpulseControl: 15,
-        moodConcerns: 15,
-      },
-    },
-    {
-      type: "Brain Type 13: Impulsive-Compulsive-Anxious",
-      thresholds: {
-        flexibleThinking: 15,
-        focusImpulseControl: 15,
-        stressAnxiety: 15,
-      },
-    },
-    {
-      type: "Brain Type 14: Impulsive-Compulsive-SAD-Anxious",
-      thresholds: {
-        flexibleThinking: 10,
-        focusImpulseControl: 10,
-        moodConcerns: 10,
-        stressAnxiety: 10,
-      },
-    },
-    {
-      type: "Brain Type 15: SAD-Anxious",
-      thresholds: { moodConcerns: 20, stressAnxiety: 20 },
-    },
-  ];
+  // Updated logic with more granular score thresholds
+  if (
+    flexibleThinkingScore >= 38 &&
+    focusImpulseControlScore >= 38 &&
+    moodConcernsScore >= 35 &&
+    stressAnxietyScore >= 35
+  ) {
+    return "Brain Type 14: Impulsive-Compulsive-SAD-Anxious"; // Reserved for very high responses like 'Very Frequently'
+  } else if (
+    flexibleThinkingScore >= 30 &&
+    focusImpulseControlScore >= 30 &&
+    moodConcernsScore >= 25 &&
+    stressAnxietyScore >= 25
+  ) {
+    return "Brain Type 5: Impulsive-Compulsive"; // "Frequently" with moderate scores
+  } else if (
+    focusImpulseControlScore >= 30 &&
+    moodConcernsScore >= 25 &&
+    stressAnxietyScore >= 25
+  ) {
+    return "Brain Type 9: Impulsive-SAD"; // Differentiates "Frequently" and "Very Frequently"
+  } else if (focusImpulseControlScore >= 30 && stressAnxietyScore >= 30) {
+    return "Brain Type 10: Impulsive-Anxious";
+  } else if (flexibleThinkingScore >= 30) {
+    return "Brain Type 1: Compulsive";
+  } else if (focusImpulseControlScore >= 30) {
+    return "Brain Type 2: Impulsive";
+  } else if (moodConcernsScore >= 30) {
+    return "Brain Type 3: SAD";
+  } else if (stressAnxietyScore >= 30) {
+    return "Brain Type 4: Anxious";
+  }
 
-  // Compare the user's scores to the thresholds to determine the closest match
-  let bestMatch = "Brain Type 16: No Specific Type";
-  let highestScore = 0;
+  // Add logic for lower score ranges (moderate responses like 'Occasionally')
+  if (
+    flexibleThinkingScore >= 20 &&
+    focusImpulseControlScore >= 20 &&
+    moodConcernsScore >= 20 &&
+    stressAnxietyScore >= 20
+  ) {
+    return "Brain Type 12: Impulsive-Compulsive-SAD";
+  } else if (focusImpulseControlScore >= 20 && moodConcernsScore >= 20) {
+    return "Brain Type 11: Impulsive-SAD-Anxious";
+  } else if (flexibleThinkingScore >= 20 && stressAnxietyScore >= 20) {
+    return "Brain Type 7: Compulsive-Anxious";
+  }
 
-  brainTypeScores.forEach((brainType) => {
-    const { thresholds, type } = brainType;
-    let confidenceScore = 0;
-
-    if (
-      thresholds.flexibleThinking &&
-      flexibleThinkingScore >= thresholds.flexibleThinking
-    )
-      confidenceScore += 1;
-    if (
-      thresholds.focusImpulseControl &&
-      focusImpulseControlScore >= thresholds.focusImpulseControl
-    )
-      confidenceScore += 1;
-    if (thresholds.moodConcerns && moodConcernsScore >= thresholds.moodConcerns)
-      confidenceScore += 1;
-    if (
-      thresholds.stressAnxiety &&
-      stressAnxietyScore >= thresholds.stressAnxiety
-    )
-      confidenceScore += 1;
-
-    if (confidenceScore > highestScore) {
-      highestScore = confidenceScore;
-      bestMatch = type;
-    }
-  });
-
-  return bestMatch;
+  // Fallback for when scores are very low (Rarely, Occasionally)
+  return "Brain Type 16: No Specific Type";
 };
+
+
 
 const Result = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const { responses } = location.state;
 
-  const brainType = determineBrainType(responses);
-  const brainTypeDescription = brainTypeDescriptions[brainType];
-
-  // Calculate the total score and convert it to a percentage
+  // Fix score calculation: total score and percentage
   const totalScore = responses.reduce((a, b) => a + b, 0);
-  const maxScore = 39 * 5;
+  const maxScore = 39 * 5; // 39 questions, max score of 5 for each question
   const scorePercentage = Math.round((totalScore / maxScore) * 100);
+
+  const brainType = determineBrainType(responses);
+  const brainTypeInfo = brainTypeDetails[brainType] || {
+    details: ["No details available for this brain type."],
+    improvements: ["No improvement suggestions available."],
+  };
 
   return (
     <div
@@ -255,15 +284,18 @@ const Result = () => {
         >
           Total: {scorePercentage}%
         </p>
-        <p
-          style={{
-            fontSize: "1.25rem",
-            color: "#666",
-            marginTop: "20px",
-          }}
-        >
-          {brainTypeDescription}
-        </p>
+        <h3>Characteristics</h3>
+        <ul style={{ textAlign: "left" }}>
+          {brainTypeInfo.details.map((detail, index) => (
+            <li key={index}>{detail}</li>
+          ))}
+        </ul>
+        <h3>Action Plan</h3>
+        <ul style={{ textAlign: "left" }}>
+          {brainTypeInfo.improvements.map((improvement, index) => (
+            <li key={index}>{improvement}</li>
+          ))}
+        </ul>
         <button
           onClick={() => navigate("/")}
           style={{
