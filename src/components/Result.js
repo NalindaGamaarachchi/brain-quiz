@@ -9,7 +9,7 @@ const brainTypeDetails = {
       "Struggle with cognitive inflexibility and getting stuck on thoughts.",
       "Trouble shifting attention and seeing options.",
     ],
-    improvements: ["Intense exercise.", "Higher complex carbohydrate diet."],
+    improvements: ["Exercise.", "Higher carbohydrate diet."],
   },
   "Brain Type 2: Impulsive": {
     details: [
@@ -45,7 +45,6 @@ const brainTypeDetails = {
     ],
     improvements: [
       "Structured goal setting.",
-      "Supplements like serotonin and dopamine boosters.",
     ],
   },
   "Brain Type 6: Compulsive-SAD": {
