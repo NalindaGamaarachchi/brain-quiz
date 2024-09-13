@@ -230,9 +230,9 @@ const Result = () => {
   const { responses } = location.state;
 
   // Fix score calculation: total score and percentage
-  const totalScore = responses.reduce((a, b) => a + b, 0);
-  const maxScore = 39 * 5; // 39 questions, max score of 5 for each question
-  const scorePercentage = Math.round((totalScore / maxScore) * 100);
+  // const totalScore = responses.reduce((a, b) => a + b, 0);
+  // const maxScore = 39 * 5; // 39 questions, max score of 5 for each question
+  // const scorePercentage = Math.round((totalScore / maxScore) * 100);
 
   const brainType = determineBrainType(responses);
   const brainTypeInfo = brainTypeDetails[brainType] || {
@@ -271,7 +271,6 @@ const Result = () => {
           {brainType}
         </p>
         <h2 style={{ color: "#333", fontSize: "1.5rem", marginBottom: "20px" }}>
-          Your Score
         </h2>
         <p
           style={{
@@ -281,7 +280,6 @@ const Result = () => {
             fontWeight: "bold",
           }}
         >
-          Total: {scorePercentage}%
         </p>
         <h3>Characteristics</h3>
         <ul style={{ textAlign: "left" }}>
