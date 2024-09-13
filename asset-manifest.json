@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/brain-quiz/static/css/main.e9e4fcea.css",
-    "main.js": "/brain-quiz/static/js/main.ef05d8b9.js",
+    "main.js": "/brain-quiz/static/js/main.91fdbda9.js",
     "static/js/453.220c1999.chunk.js": "/brain-quiz/static/js/453.220c1999.chunk.js",
     "index.html": "/brain-quiz/index.html",
     "main.e9e4fcea.css.map": "/brain-quiz/static/css/main.e9e4fcea.css.map",
-    "main.ef05d8b9.js.map": "/brain-quiz/static/js/main.ef05d8b9.js.map",
+    "main.91fdbda9.js.map": "/brain-quiz/static/js/main.91fdbda9.js.map",
     "453.220c1999.chunk.js.map": "/brain-quiz/static/js/453.220c1999.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e9e4fcea.css",
-    "static/js/main.ef05d8b9.js"
+    "static/js/main.91fdbda9.js"
   ]
 }
