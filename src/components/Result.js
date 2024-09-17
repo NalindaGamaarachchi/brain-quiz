@@ -471,6 +471,50 @@ const determineBrainType = (responses) => {
   return "Brain Type 16: No Specific Type";
 };
 
+// const determineBrainType = (responses) => {
+//   // Helper function to count how many answers are 3 or higher in a given range of questions
+//   const countHighResponses = (start, end) => {
+//     return responses.slice(start, end).filter(answer => answer >= 3).length;
+//   };
+
+//   // Count high responses for each category
+//   const compulsiveScore = countHighResponses(0, 10); // Questions 1-10
+//   const impulsiveScore = countHighResponses(10, 20); // Questions 11-20
+//   const sadScore = countHighResponses(20, 30); // Questions 21-30
+//   const anxiousScore = countHighResponses(30, 39); // Questions 31-39
+
+//   // Check for each brain type based on the number of high responses in each section
+//   const isCompulsive = compulsiveScore >= 2;
+//   const isImpulsive = impulsiveScore >= 2;
+//   const isSAD = sadScore >= 2;
+//   const isAnxious = anxiousScore >= 2;
+
+//   // Logic to determine complex brain types
+//   if (isCompulsive && isImpulsive && isSAD && isAnxious) {
+//     return "Brain Type 14: Impulsive-Compulsive-SAD-Anxious";
+//   } else if (isCompulsive && isImpulsive && isSAD) {
+//     return "Brain Type 12: Impulsive-Compulsive-SAD";
+//   } else if (isImpulsive && isSAD && isAnxious) {
+//     return "Brain Type 11: Impulsive-SAD-Anxious";
+//   } else if (isCompulsive && isAnxious) {
+//     return "Brain Type 7: Compulsive-Anxious";
+//   } else if (isImpulsive && isAnxious) {
+//     return "Brain Type 10: Impulsive-Anxious";
+//   } else if (isSAD && isAnxious) {
+//     return "Brain Type 15: SAD-Anxious";
+//   } else if (isCompulsive) {
+//     return "Brain Type 1: Compulsive";
+//   } else if (isImpulsive) {
+//     return "Brain Type 2: Impulsive";
+//   } else if (isSAD) {
+//     return "Brain Type 3: SAD";
+//   } else if (isAnxious) {
+//     return "Brain Type 4: Anxious";
+//   } else {
+//     return "Brain Type 16: No Specific Type";
+//   }
+// };
+
 
 
 const Result = () => {
