@@ -2,7 +2,7 @@ import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import "../App.css";
 
-// Define brain type descriptions and improvements based on the PDF
+// Define brain type descriptions and improvements
 const brainTypeDetails = {
   "Brain Type 1: Compulsive": {
     spectFindings: [
@@ -407,7 +407,6 @@ const brainTypeDetails = {
   },
 };
 
-
 const determineBrainType = (responses) => {
   // Helper function to calculate total score in each question range
   const calculateSectionScore = (start, end) => {
@@ -420,27 +419,27 @@ const determineBrainType = (responses) => {
   const moodConcernsScore = calculateSectionScore(20, 30); // Q21-30
   const stressAnxietyScore = calculateSectionScore(30, 39); // Q31-39
 
-  // Updated logic with more granular score thresholds
+  // Add logic to determine the brain type based on the scores
   if (
     flexibleThinkingScore >= 38 &&
     focusImpulseControlScore >= 38 &&
     moodConcernsScore >= 35 &&
     stressAnxietyScore >= 35
   ) {
-    return "Brain Type 14: Impulsive-Compulsive-SAD-Anxious"; // Reserved for very high responses like 'Very Frequently'
+    return "Brain Type 14: Impulsive-Compulsive-SAD-Anxious";
   } else if (
     flexibleThinkingScore >= 30 &&
     focusImpulseControlScore >= 30 &&
     moodConcernsScore >= 25 &&
     stressAnxietyScore >= 25
   ) {
-    return "Brain Type 5: Impulsive-Compulsive"; // "Frequently" with moderate scores
+    return "Brain Type 5: Impulsive-Compulsive";
   } else if (
     focusImpulseControlScore >= 30 &&
     moodConcernsScore >= 25 &&
     stressAnxietyScore >= 25
   ) {
-    return "Brain Type 9: Impulsive-SAD"; // Differentiates "Frequently" and "Very Frequently"
+    return "Brain Type 9: Impulsive-SAD";
   } else if (focusImpulseControlScore >= 30 && stressAnxietyScore >= 30) {
     return "Brain Type 10: Impulsive-Anxious";
   } else if (flexibleThinkingScore >= 30) {
@@ -453,123 +452,108 @@ const determineBrainType = (responses) => {
     return "Brain Type 4: Anxious";
   }
 
-  // Add logic for lower score ranges (moderate responses like 'Occasionally')
-  if (
-    flexibleThinkingScore >= 20 &&
-    focusImpulseControlScore >= 20 &&
-    moodConcernsScore >= 20 &&
-    stressAnxietyScore >= 20
-  ) {
-    return "Brain Type 12: Impulsive-Compulsive-SAD";
-  } else if (focusImpulseControlScore >= 20 && moodConcernsScore >= 20) {
-    return "Brain Type 11: Impulsive-SAD-Anxious";
-  } else if (flexibleThinkingScore >= 20 && stressAnxietyScore >= 20) {
-    return "Brain Type 7: Compulsive-Anxious";
-  }
-
-  // Fallback for when scores are very low (Rarely, Occasionally)
-  return "Brain Type 16: No Specific Type";
+  return "Brain Type 16: No Brain Type";
 };
-
-// const determineBrainType = (responses) => {
-//   // Helper function to count how many answers are 3 or higher in a given range of questions
-//   const countHighResponses = (start, end) => {
-//     return responses.slice(start, end).filter(answer => answer >= 3).length;
-//   };
-
-//   // Count high responses for each category
-//   const compulsiveScore = countHighResponses(0, 10); // Questions 1-10
-//   const impulsiveScore = countHighResponses(10, 20); // Questions 11-20
-//   const sadScore = countHighResponses(20, 30); // Questions 21-30
-//   const anxiousScore = countHighResponses(30, 39); // Questions 31-39
-
-//   // Check for each brain type based on the number of high responses in each section
-//   const isCompulsive = compulsiveScore >= 2;
-//   const isImpulsive = impulsiveScore >= 2;
-//   const isSAD = sadScore >= 2;
-//   const isAnxious = anxiousScore >= 2;
-
-//   // Logic to determine complex brain types
-//   if (isCompulsive && isImpulsive && isSAD && isAnxious) {
-//     return "Brain Type 14: Impulsive-Compulsive-SAD-Anxious";
-//   } else if (isCompulsive && isImpulsive && isSAD) {
-//     return "Brain Type 12: Impulsive-Compulsive-SAD";
-//   } else if (isImpulsive && isSAD && isAnxious) {
-//     return "Brain Type 11: Impulsive-SAD-Anxious";
-//   } else if (isCompulsive && isAnxious) {
-//     return "Brain Type 7: Compulsive-Anxious";
-//   } else if (isImpulsive && isAnxious) {
-//     return "Brain Type 10: Impulsive-Anxious";
-//   } else if (isSAD && isAnxious) {
-//     return "Brain Type 15: SAD-Anxious";
-//   } else if (isCompulsive) {
-//     return "Brain Type 1: Compulsive";
-//   } else if (isImpulsive) {
-//     return "Brain Type 2: Impulsive";
-//   } else if (isSAD) {
-//     return "Brain Type 3: SAD";
-//   } else if (isAnxious) {
-//     return "Brain Type 4: Anxious";
-//   } else {
-//     return "Brain Type 16: No Specific Type";
-//   }
-// };
-
-
 
 const Result = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const { responses } = location.state;
 
-  // Fix score calculation: total score and percentage
-  // const totalScore = responses.reduce((a, b) => a + b, 0);
-  // const maxScore = 39 * 5; // 39 questions, max score of 5 for each question
-  // const scorePercentage = Math.round((totalScore / maxScore) * 100);
+  // Determine brain type based on responses
+  const brainType = determineBrainType(responses);
+  console.log("Determined Brain Type:", brainType); // Log for debugging
 
-   const brainType = determineBrainType(responses);
-   const brainTypeInfo = brainTypeDetails[brainType] || {
-     spectFindings: [],
-     characteristics: [],
-     actionPlan: [],
-   };
+  // Get brain type details, or use a fallback if no match
+  const brainTypeInfo = brainTypeDetails[brainType] || {
+    spectFindings: [],
+    characteristics: [],
+    actionPlan: [],
+  };
 
-  
-   
-   return (
-    <div style={{ display: "flex", justifyContent: "center", alignItems: "center", minHeight: "100vh", backgroundColor: "#f4f4f9", padding: "20px" }}>
-      <div style={{ backgroundColor: "white", padding: "30px", borderRadius: "10px", boxShadow: "0 0 20px rgba(0, 0, 0, 0.1)", textAlign: "center", maxWidth: "500px", width: "100%" }}>
-        <h1 style={{ color: "#4CAF50", fontSize: "2.5rem", marginBottom: "10px" }}>Your Brain Type</h1>
-        <p style={{ fontSize: "1.5rem", color: "#333", marginBottom: "20px" }}>{brainType}</p>
+  return (
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        minHeight: "100vh",
+        backgroundColor: "#f4f4f9",
+        padding: "20px",
+      }}
+    >
+      <div
+        style={{
+          backgroundColor: "white",
+          padding: "30px",
+          borderRadius: "10px",
+          boxShadow: "0 0 20px rgba(0, 0, 0, 0.1)",
+          textAlign: "center",
+          maxWidth: "500px",
+          width: "100%",
+        }}
+      >
+        <h1
+          style={{ color: "#4CAF50", fontSize: "2.5rem", marginBottom: "10px" }}
+        >
+          Your Brain Type
+        </h1>
+        <p style={{ fontSize: "1.5rem", color: "#333", marginBottom: "20px" }}>
+          {brainType}
+        </p>
 
         <h3>SPECT Findings</h3>
         <ul style={{ textAlign: "left" }}>
-          {brainTypeInfo.spectFindings.length > 0 ? brainTypeInfo.spectFindings.map((finding, index) => (
-            <li key={index}>{finding}</li>
-          )) : <li>No SPECT findings available.</li>}
+          {brainTypeInfo.spectFindings.length > 0 ? (
+            brainTypeInfo.spectFindings.map((finding, index) => (
+              <li key={index}>{finding}</li>
+            ))
+          ) : (
+            <li>No SPECT findings available.</li>
+          )}
         </ul>
 
         <h3>Characteristics</h3>
         <ul style={{ textAlign: "left" }}>
-          {brainTypeInfo.characteristics.length > 0 ? brainTypeInfo.characteristics.map((characteristic, index) => (
-            <li key={index}>{characteristic}</li>
-          )) : <li>No characteristics available.</li>}
+          {brainTypeInfo.characteristics.length > 0 ? (
+            brainTypeInfo.characteristics.map((characteristic, index) => (
+              <li key={index}>{characteristic}</li>
+            ))
+          ) : (
+            <li>No characteristics available.</li>
+          )}
         </ul>
 
         <h3>Action Plan</h3>
         <ul style={{ textAlign: "left" }}>
-          {brainTypeInfo.actionPlan.length > 0 ? brainTypeInfo.actionPlan.map((plan, index) => (
-            <li key={index}>{plan}</li>
-          )) : <li>No action plan available.</li>}
+          {brainTypeInfo.actionPlan.length > 0 ? (
+            brainTypeInfo.actionPlan.map((plan, index) => (
+              <li key={index}>{plan}</li>
+            ))
+          ) : (
+            <li>No action plan available.</li>
+          )}
         </ul>
 
-        <button onClick={() => navigate("/")} style={{ backgroundColor: "#6fa8dc", border: "none", color: "white", padding: "15px 30px", borderRadius: "25px", fontSize: "16px", cursor: "pointer", transition: "background-color 0.3s, transform 0.2s", marginTop: "20px" }}>
+        <button
+          onClick={() => navigate("/")}
+          style={{
+            backgroundColor: "#6fa8dc",
+            border: "none",
+            color: "white",
+            padding: "15px 30px",
+            borderRadius: "25px",
+            fontSize: "16px",
+            cursor: "pointer",
+            transition: "background-color 0.3s, transform 0.2s",
+            marginTop: "20px",
+          }}
+        >
           Take the Quiz Again
         </button>
       </div>
     </div>
   );
-
 };
 
 export default Result;
