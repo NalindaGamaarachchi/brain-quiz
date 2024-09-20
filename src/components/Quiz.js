@@ -67,11 +67,11 @@ const Quiz = () => {
       <div className="wrapper">
         <h2>{questions[currentQuestion]}</h2>
         <div style={{ marginTop: "20px" }}>
-          <button onClick={() => handleResponse(1)}>Never</button>
-          <button onClick={() => handleResponse(2)}>Rarely</button>
-          <button onClick={() => handleResponse(3)}>Occasionally</button>
-          <button onClick={() => handleResponse(4)}>Frequently</button>
-          <button onClick={() => handleResponse(5)}>Very Frequently</button>
+          <button onClick={() => handleResponse(1)}>从不</button>
+          <button onClick={() => handleResponse(2)}>很少</button>
+          <button onClick={() => handleResponse(3)}>偶尔</button>
+          <button onClick={() => handleResponse(4)}>经常</button>
+          <button onClick={() => handleResponse(5)}>非常频繁</button>
         </div>
       </div>
       <div id="progress-bar">

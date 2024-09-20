@@ -4,116 +4,114 @@ import "../App.css";
 
 // Define brain type descriptions and improvements
 const brainTypeDetails = {
-  "Brain Type 1: Compulsive": {
+  "类型1: 强迫型": {
     spectFindings: [
-      "大脑前部活动增加，尤其是在被称为前扣带回的区域，通常被认为是大脑的变速器。",
-      "通常与低水平的神经递质血清素有关。",
+      "大脑前部活动增加，尤其是在前扣带回这个被认为是大脑“换挡器”的区域的活动的增加",
+      "一般被认为是和神经递质血清素水平较低有关",
     ],
     characteristics: [
-      "难以转移注意力。",
-      "容易陷入担忧的想法、焦虑或沮丧的想法、食物想法或强迫行为中。",
-      "容易陷入某一行动方向，难以改变。",
-      "难以看到其他选择。",
-      "希望事情按照自己的方式进行。",
-      "在认知灵活性方面有困难。",
-      "对自己和他人看到的错误过多。",
-      "容易怀恨在心。",
-      "有对抗或争论行为的问题。",
-      "晚间饮食综合症：晚上暴食，早上不饿。",
+      "转移注意力困难",
+      "容易陷入忧虑，焦虑，抑郁情绪中，以及对食物的想法或强迫行为中",
+      "容易陷入或者困在单一行为模式中",
+      "常常难以看到其他可选方案",
+      "想要事务按照他们的方式进行",
+      "缺乏认知弹性",
+      "容易在他们自己或者其他人身上看到很多错误",
+      "容易怀恨在心",
+      "存在对抗性或争辩行为的问题",
+      "夜餐综合症：倾向于晚上暴饮暴食，在白天早上时候没有食欲",
     ],
     actionPlan: [
-      "当一个想法在你脑海中出现三次以上时，学会分散注意力。",
-      "高强度运动。",
-      "高复杂碳水化合物饮食。",
-      "鱼油，如Omega-3。",
-      "优化维生素D水平。",
-      "自然方式提升血清素，例如锻炼、复杂碳水化合物和5HTP、肌醇和藏红花等膳食补充剂的组合。",
+      "当一个想法在你头脑中反复出现三次以上的时候学着分散注意力",
+      "高强度运动",
+      "饮食采用高复杂度的碳水化合物",
+      "鱼油，比如Omega-3 Power鱼油",
+      "优化维生素D水平",
+      "通过自然的方式提升血清素水平，比如锻炼，多样化的碳水来源；以及5-羟色氨酸（5HTP），肌醇，番红花等膳食补充剂，Serotonin Mood Support可以提供以上膳食补充组合。",
     ],
   },
-  "Brain Type 2: Impulsive": {
+  "类型2: 冲动型": {
+    spectFindings: ["前额叶皮层活动降低，通常和低多巴胺水平有关"],
+    characteristics: [
+      "容易冲动，难以控制他们的行为，尽管每天开始时他们可能带着良好的意愿",
+      "由于大脑前额叶皮层（PFC）活动过低-大脑内多巴胺水平过低",
+      "心不在焉，注意力分散，无聊，偏离任务和冲动",
+      "在注意力缺陷障碍/注意力缺陷多动障碍（ADD/ADHD）人群中较为常见--与注意力时间短，注意力分散，缺少规划性，躁动不安和冲动这些长期存在的问题有关",
+    ],
+    actionPlan: [
+      "结构化的目标设定",
+      "高强度运动",
+      "更多高质量蛋白的膳食",
+      "鱼油，比如Omega-3 Power鱼油",
+      "优化维生素D水平",
+      "天然的方式增加多巴胺分泌包括高强度运动，趣味度高的活动，以及绿茶，红景天，睡茄等膳食补充剂，Focus & Energy Optimizer可以提供以上膳食补充",
+    ],
+  },
+  "类型3: 悲伤型": {
     spectFindings: [
-      "前额皮质（PFC）活动减少，通常与大脑中低水平的多巴胺有关。",
+      "大脑深部边缘区活动增加",
+      "前额叶皮层（PFC）活动降低，通常与大脑低多巴胺水平或者去甲肾上腺素水平相关",
     ],
     characteristics: [
-      "难以控制冲动行为，即使他们每天都开始有良好的意图。",
-      "前额皮质活动过少，导致注意力不集中、分心、无聊、偏离任务和冲动。",
-      "通常出现在患有ADD/ADHD的人群中。",
-      "与注意力短暂、分心、缺乏组织、坐立不安和冲动长期相关。",
+      "倾向于用食物或其他物质来缓解悲伤的情绪和平息他们大脑中的情绪风暴",
+      "经常受到无聊，孤独，抑郁，自卑和疼痛问题的困扰",
+      "可能出现性欲减退，哭泣，精力低下，和对通常愉悦的活动缺乏兴趣的体验",
+      "需要对抗负罪感，无助感，绝望感或者无价值感等感情",
+      "部分）情感会跟随季节的变化，且倾向于在冬天加重",
+      "体验到轻度的慢性悲伤感，也即恶劣心境",
+      "承受更多的抑郁感",
+      "在女性中更常见",
     ],
     actionPlan: [
-      "制定结构化目标。",
-      "高强度锻炼。",
-      "高质量蛋白质饮食。",
-      "鱼油，如Omega-3。",
-      "优化维生素D水平。",
-      "自然提升多巴胺的方式包括高强度运动、极具趣味的活动和绿茶、红景天、冬虫夏草等膳食补充剂。",
+      "学会消除自发性的负面情感（ANTs）",
+      "高强度运动",
+      "蛋白质和复杂碳水化合物的均衡膳食",
+      "鱼油，比如Omega-3 Power鱼油",
+      "优化维生素D水平",
+      "补充含S-腺苷甲硫氨酸（SAMe）的膳食补充剂，比如SAMe Mood & Movement Support",
     ],
   },
-  "Brain Type 3: Sad or Emotional": {
+  "类型4: 焦虑型": {
+    spectFindings: ["基底节活动增加，通常由于镇定神经递质GABA水平低下导致"],
+    characteristics: [
+      "倾向于通过食物或其他物质来缓解焦虑、紧张、神经质和恐惧等情绪",
+      "常常被恐慌、恐惧和自我怀疑的情绪困扰",
+      "可能会出现焦虑的身体症状，如肌肉紧张、咬指甲、头痛、腹痛、心悸、呼吸急促和肌肉酸",
+    ],
+    actionPlan: [
+      "学习如何消除自动负面思维（ANTs）",
+      "冥想",
+      "催眠 ",
+      "横膈膜呼吸",
+      "放松的音乐 ",
+      "高强度运动 ",
+      "蛋白质和复杂碳水化合物的平衡饮食 ",
+      "鱼油，如Omega-3 Power鱼油",
+      "优化维生素D水平 ",
+      "使用含GABA、B6、镁和柠檬香蜂草的膳食补充剂，如GABA Calming Support",
+    ],
+  },
+  "类型 5: I冲动-强迫型": {
     spectFindings: [
-      "大脑深层边缘系统活动增加。",
-      "前额皮质活动减少，通常与大脑中低水平的多巴胺或去甲肾上腺素有关。",
+      "前额叶皮层（PFC）活动减少，通常与大脑多巴胺水平低有关",
+      "前扣带回（anterior cingulate gyrus）活动增加，通常是由大脑血清素水平低引起的",
     ],
     characteristics: [
-      "倾向于用食物或其他物质来缓解内心的悲伤并平息大脑中的情感风暴。",
-      "经常感到无聊、孤独、抑郁、自尊心低下和痛苦问题。",
-      "可能出现性欲减退、哭泣期、能量低下和对通常愉快活动缺乏兴趣。",
-      "感到内疚、无助、绝望或一文不值的情绪。",
-      "有些人的情绪随季节变化而波动，冬季更严重。",
-      "经历轻度的慢性悲伤，称为持续性抑郁症。",
-      "遭受更严重的抑郁症困扰。",
-      "女性中更常见。",
+      "具有冲动和强迫特征的组合",
+      "特别常见于酗酒者的子女和孙子孙女，或有显著酗酒家族史的人群",
+      "贪食症患者中也很常见",
     ],
     actionPlan: [
-      "学会消灭自动负面想法（ANTs）。",
-      "高强度锻炼。",
-      "平衡蛋白质和复杂碳水化合物的饮食。",
-      "鱼油，如Omega-3。",
+      "学会在脑中出现同一想法超过三次时分散注意力",
+      "结构化目标设定",
+      "高强度运动",
+      "复杂碳水化合物和蛋白质之间的平衡饮食",
+      "鱼油，如Omega-3 Power鱼油",
       "优化维生素D水平。",
-      "膳食补充剂如SAMe可以在SAMe Mood & Movement Support中找到。",
+      "自然增加血清素和多巴胺的方法包括强度运动、平衡饮食，以及膳食补充剂的组合，如夜间使用Serotonin Mood Support，早晨和下午使用Focus & Energy Optimizer",
     ],
   },
-  "Brain Type 4: Anxious": {
-    spectFindings: ["基底神经节活动增加，通常与低水平的镇静神经递质GABA有关。"],
-    characteristics: [
-      "容易用食物或其他物质来缓解焦虑、紧张、神经质和恐惧感。",
-      "被恐慌、恐惧和自我怀疑的情绪困扰。",
-      "可能会经历焦虑的身体症状，如肌肉紧张、咬指甲、头痛、腹痛、心悸、呼吸短促和肌肉酸痛。",
-    ],
-    actionPlan: [
-      "学会消灭自动负面想法（ANTs）。",
-      "冥想。",
-      "催眠。",
-      "横膈膜呼吸。",
-      "放松音乐。",
-      "高强度锻炼。",
-      "平衡蛋白质和复杂碳水化合物的饮食。",
-      "鱼油，如Omega-3。",
-      "优化维生素D水平。",
-      "膳食补充剂如GABA、维生素B6、镁和柠檬香蜂草，可以在GABA Calming Support中找到。",
-    ],
-  },
-  "Brain Type 5: Impulsive-Compulsive": {
-    spectFindings: [
-      "前额皮质活动减少，通常与低水平的多巴胺有关。",
-      "前扣带回活动增加，通常由低水平的血清素引起。",
-    ],
-    characteristics: [
-      "具有冲动和强迫的双重特征。",
-      "在有酗酒史的家庭中更为常见。",
-      "常见于患有暴食症的人。",
-    ],
-    actionPlan: [
-      "当一个想法在你脑海中出现三次以上时，学会分散注意力。",
-      "制定结构化目标。",
-      "高强度锻炼。",
-      "平衡复杂碳水化合物和蛋白质的饮食。",
-      "鱼油，如Omega-3。",
-      "优化维生素D水平。",
-      "自然方式增加血清素和多巴胺，包括高强度运动、平衡饮食，结合膳食补充剂如Serotonin Mood Support和Focus & Energy Optimizer。",
-    ],
-  },
-  "Brain Type 6: Compulsive-SAD": {
+  "类型6: 强制-悲伤型": {
     spectFindings: [
       "前扣带回活动增加，通常由低水平的血清素引起。",
       "大脑深层边缘系统活动增加。",
@@ -133,7 +131,7 @@ const brainTypeDetails = {
       "优化维生素D水平。",
     ],
   },
-  "Brain Type 7: Compulsive-Anxious": {
+  "类型7: 强迫-焦虑型": {
     spectFindings: [
       "前扣带回活动增加，通常由低水平的血清素引起。",
       "基底神经节活动过度，通常与低水平的镇静神经递质GABA有关。",
@@ -156,7 +154,7 @@ const brainTypeDetails = {
       "优化维生素D水平。",
     ],
   },
-  "Brain Type 8: Compulsive-SAD-Anxious": {
+  "类型8: 强迫-悲伤-焦虑型": {
     spectFindings: [
       "前扣带回活动增加，通常由低水平的血清素引起。",
       "大脑深层边缘系统活动增加。",
@@ -181,7 +179,7 @@ const brainTypeDetails = {
       "优化维生素D水平。",
     ],
   },
-  "Brain Type 9: Impulsive-SAD": {
+  "类型9: 冲动-悲伤型": {
     spectFindings: [
       "前额皮质活动减少，通常与低水平的多巴胺和去甲肾上腺素有关。",
       "大脑深层边缘系统活动增加。",
@@ -199,7 +197,7 @@ const brainTypeDetails = {
       "优化维生素D水平。",
     ],
   },
-  "Brain Type 10: Impulsive-Anxious": {
+  "类型10: 冲动-焦虑型": {
     spectFindings: [
       "前额皮质活动减少，通常与大脑中低水平的多巴胺有关。",
       "基底神经节活动过度。",
@@ -221,7 +219,7 @@ const brainTypeDetails = {
       "优化维生素D水平。",
     ],
   },
-  "Brain Type 11: Impulsive-SAD-Anxious": {
+  "类型11: 冲动-悲伤-焦虑型": {
     spectFindings: [
       "前额皮质活动减少，通常与低水平的多巴胺和去甲肾上腺素有关。",
       "大脑深层边缘系统活动增加。",
@@ -244,7 +242,7 @@ const brainTypeDetails = {
       "优化维生素D水平。",
     ],
   },
-  "Brain Type 12: Impulsive-Compulsive-SAD": {
+  "类型12: 冲动-强迫-悲伤型": {
     spectFindings: [
       "前额皮质活动减少，通常与低水平的多巴胺和去甲肾上腺素有关。",
       "前扣带回活动增加，通常由低水平的血清素引起。",
@@ -264,7 +262,7 @@ const brainTypeDetails = {
       "优化维生素D水平。",
     ],
   },
-  "Brain Type 13: Impulsive-Compulsive-Anxious": {
+  "类型13: 冲动-强迫-焦虑型": {
     spectFindings: [
       "前额皮质活动减少，通常与低水平的多巴胺有关。",
       "前扣带回活动增加，通常由低水平的血清素引起。",
@@ -288,7 +286,7 @@ const brainTypeDetails = {
       "优化维生素D水平。",
     ],
   },
-  "Brain Type 14: Impulsive-Compulsive-SAD-Anxious": {
+  "类型14: 冲动-强迫-悲伤-焦虑型": {
     spectFindings: [
       "前额皮质活动减少，通常与低水平的多巴胺和去甲肾上腺素有关。",
       "前扣带回活动增加，通常由低水平的血清素引起。",
@@ -313,7 +311,7 @@ const brainTypeDetails = {
       "优化维生素D水平。",
     ],
   },
-  "Brain Type 15: SAD-Anxious": {
+  "类型15: 悲伤-焦虑型": {
     spectFindings: [
       "大脑深层边缘系统活动增加。",
       "前额皮质活动减少，通常与低水平的多巴胺和去甲肾上腺素有关。",
@@ -334,7 +332,7 @@ const brainTypeDetails = {
       "膳食补充剂如SAMe和GABA可以在SAMe Mood & Movement Support和GABA Calming Support中找到。",
     ],
   },
-  "Brain Type 16: No Brain Type": {
+  "类型16: 无类型": {
     spectFindings: [
       "有些人没有明确的大脑类型，或者他们对自己不够了解，需要让了解他们的人来填写问卷。",
     ],
@@ -364,33 +362,33 @@ const determineBrainType = (responses) => {
     moodConcernsScore >= 35 &&
     stressAnxietyScore >= 35
   ) {
-    return "Brain Type 14: Impulsive-Compulsive-SAD-Anxious";
+    return "类型14: 冲动-强迫-悲伤-焦虑型";
   } else if (
     flexibleThinkingScore >= 30 &&
     focusImpulseControlScore >= 30 &&
     moodConcernsScore >= 25 &&
     stressAnxietyScore >= 25
   ) {
-    return "Brain Type 5: Impulsive-Compulsive";
+    return "类型 5: I冲动-强迫型";
   } else if (
     focusImpulseControlScore >= 30 &&
     moodConcernsScore >= 25 &&
     stressAnxietyScore >= 25
   ) {
-    return "Brain Type 9: Impulsive-SAD";
+    return "类型9: 冲动-悲伤型";
   } else if (focusImpulseControlScore >= 30 && stressAnxietyScore >= 30) {
-    return "Brain Type 10: Impulsive-Anxious";
+    return "类型10: 冲动-焦虑型";
   } else if (flexibleThinkingScore >= 30) {
-    return "Brain Type 1: Compulsive";
+    return "类型1: 强迫型";
   } else if (focusImpulseControlScore >= 30) {
-    return "Brain Type 2: Impulsive";
+    return "类型2: 冲动型";
   } else if (moodConcernsScore >= 30) {
-    return "Brain Type 3: SAD";
+    return "类型3: 悲伤型";
   } else if (stressAnxietyScore >= 30) {
-    return "Brain Type 4: Anxious";
+    return "类型4: 焦虑型";
   }
 
-  return "Brain Type 16: No Brain Type";
+  return "类型16: 无类型";
 };
 
 const Result = () => {
@@ -434,42 +432,42 @@ const Result = () => {
         <h1
           style={{ color: "#4CAF50", fontSize: "2.5rem", marginBottom: "10px" }}
         >
-          Your Brain Type
+          你的大脑类型
         </h1>
         <p style={{ fontSize: "1.5rem", color: "#333", marginBottom: "20px" }}>
           {brainType}
         </p>
 
-        <h3>SPECT Findings</h3>
+        <h3>SPECT 结果</h3>
         <ul style={{ textAlign: "left" }}>
           {brainTypeInfo.spectFindings.length > 0 ? (
             brainTypeInfo.spectFindings.map((finding, index) => (
               <li key={index}>{finding}</li>
             ))
           ) : (
-            <li>No SPECT findings available.</li>
+            <li>没有可用的 SPECT 结果.</li>
           )}
         </ul>
 
-        <h3>Characteristics</h3>
+        <h3>特征</h3>
         <ul style={{ textAlign: "left" }}>
           {brainTypeInfo.characteristics.length > 0 ? (
             brainTypeInfo.characteristics.map((characteristic, index) => (
               <li key={index}>{characteristic}</li>
             ))
           ) : (
-            <li>No characteristics available.</li>
+            <li>没有可用的特征.</li>
           )}
         </ul>
 
-        <h3>Action Plan</h3>
+        <h3>行动计划</h3>
         <ul style={{ textAlign: "left" }}>
           {brainTypeInfo.actionPlan.length > 0 ? (
             brainTypeInfo.actionPlan.map((plan, index) => (
               <li key={index}>{plan}</li>
             ))
           ) : (
-            <li>No action plan available.</li>
+            <li>没有可用的行动计划</li>
           )}
         </ul>
 
@@ -487,7 +485,7 @@ const Result = () => {
             marginTop: "20px",
           }}
         >
-          Take the Quiz Again
+          再次进行测试
         </button>
       </div>
     </div>

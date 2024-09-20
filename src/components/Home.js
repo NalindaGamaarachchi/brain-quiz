@@ -11,8 +11,8 @@ const Home = () => {
 
   return (
     <div className="container">
-      <h1>Welcome to the Brain Quiz</h1>
-      <button onClick={startQuiz}>Take the Quiz</button>
+      <h1>欢迎参加大脑测试</h1>
+      <button onClick={startQuiz}>参加测试</button>
     </div>
   );
 };

@@ -1,0 +1,387 @@
+{
+  "welcome": "Welcome to the Brain Quiz",
+  "takeQuiz": "Take the Quiz",
+  "questions": [
+    "ORGANIZATION IS EXCELLENT.",
+    "GET EASILY DISTRACTED.",
+    "ATTENTION SPAN IS POOR.",
+    "IT IS EASY TO BE PATIENT AND WAIT IN LINE.",
+    "LOSE TRAIN OF THOUGHT RIGHT IN THE MIDDLE OF TALKING ABOUT SOMETHING.",
+    "HAVE TROUBLE DELAYING GRATIFICATION.",
+    "STRUGGLE WITH MEMORY.",
+    "MEMORY IS WORSE THAN IT WAS 10 YEARS AGO.",
+    "HAVE TROUBLE REMEMBERING NAMES.",
+    "EXERCISE MORE THAN TWICE PER WEEK.",
+    "GET AT LEAST 7-8 HOURS OF SLEEP A DAY.",
+    "DIET TENDS TO BE POOR AND HAPHAZARD.",
+    "DRINK MORE THAN 2 NORMAL SIZE (8 OUNCES) CUPS OF COFFEE A DAY.",
+    "DRINK SUGAR SWEETENED SODA EVERY DAY.",
+    "HAVE MORE THAN 4 NORMAL SIZE ALCOHOLIC DRINKS EACH WEEK.",
+    "SMOKE CIGARETTES OR CIGARS OR EXPOSED TO SECONDHAND SMOKE.",
+    "SPEND MORE THAN AN HOUR A DAY WATCHING TV.",
+    "HAVE TROUBLE GETTING AND STAYING ASLEEP.",
+    "UNDER HIGH STRESS AT WORK OR HOME.",
+    "CLOSE RELATIONSHIPS ARE HEALTHY AND SATISFYING.",
+    "INVOLVED IN NEW LEARNING ACTIVITIES OR BRAIN TRAINING GAMES.",
+    "TEND TO NOTICE WHAT IS WRONG MORE THAN WHAT IS RIGHT.",
+    "TEND TO BE ARGUMENTATIVE OR OPPOSITIONAL.",
+    "THOUGHTS TEND TO LOOP AND GET STUCK IN MIND.",
+    "STRUGGLE WITH FEELING SAD OR BLUE.",
+    "STRUGGLE WITH WORRY.",
+    "HAVE TROUBLE LETTING GO OF HURTS FROM THE PAST.",
+    "THOUGHTS ARE NEGATIVE.",
+    "SELF-ESTEEM IS REALLY GOOD.",
+    "HAVE TROUBLE EXPERIENCING JOY.",
+    "TEND TO TAKE THINGS THE WRONG WAY.",
+    "HAVE DIFFICULTY RELAXING.",
+    "TENDENCY TO PREDICT THE WORST.",
+    "SENSITIVE TO CRITICISM.",
+    "BITE FINGERNAILS OR PICK AT SKIN.",
+    "FEEL TENSE OR NERVOUS.",
+    "ENERGY LEVEL MOST DAYS IS EXCELLENT.",
+    "STRUGGLE WITH CRAVINGS."
+  ],
+  "Your Brain Type": "Your Brain Type",
+  "Take the Quiz Again": "Take the Quiz Again",
+  "brainTypes": {
+    "Brain Type 1: Compulsive": {
+      "spectFindings": [
+        "Increased activity in the front part of the brain, especially in an area called the anterior cingulate gyrus which is thought of as the brain’s gear shifter.",
+        "Commonly associated with low levels of the neurotransmitter serotonin."
+      ],
+      "characteristics": [
+        "Have trouble shifting their attention.",
+        "Tend to get stuck on worrisome thoughts, anxious or depressing thoughts, thoughts of food, or compulsive behaviors.",
+        "Tend to get stuck or locked into one course of action.",
+        "Tend to have trouble seeing options.",
+        "Want to have things their way.",
+        "Struggle with cognitive inflexibility.",
+        "Tend to see too many errors in themselves and others.",
+        "Tend to hold grudges.",
+        "Have problems with oppositional or argumentative behavior.",
+        "Nighttime-eating syndrome: tend to gorge at night and not be hungry early in the day."
+      ],
+      "actionPlan": [
+        "Learn how to distract yourself when you get a thought in your head more than three times.",
+        "Intense exercise.",
+        "A higher complex carbohydrate diet.",
+        "Fish oil, such as Omega-3 Power.",
+        "Optimize vitamin D level.",
+        "Natural ways to boost serotonin, such as exercise, complex carbohydrates, and dietary supplements such as 5HTP, inositol and saffron, the combination of which can be found in Serotonin Mood Support."
+      ]
+    },
+    "Brain Type 2: Impulsive": {
+      "spectFindings": [
+        "Decreased activity in the PFC, which is commonly associated with low brain dopamine levels."
+      ],
+      "characteristics": [
+        "Struggle with impulsivity and trouble controlling their behavior, even though they may start each day with good intentions.",
+        "Results from too little activity in the brain’s prefrontal cortex (PFC) - low dopamine levels in the brain.",
+        "Being inattentive, distracted, bored, off task, and impulsive.",
+        "Often seen in people who have ADD/ADHD.",
+        "Associated with longstanding issues of short attention span, distractibility, disorganization, restlessness, and impulsivity."
+      ],
+      "actionPlan": [
+        "Structured goal setting.",
+        "Intense exercise.",
+        "A higher high-quality protein diet.",
+        "Fish oil, such as Omega-3 Power.",
+        "Optimize vitamin D level.",
+        "Natural ways to boost dopamine include intense exercise, highly interesting activities, and dietary supplements such as green tea, rhodiola and ashwagandha, found in Focus & Energy Optimizer."
+      ]
+    },
+    "Brain Type 3: Sad or Emotional": {
+      "spectFindings": [
+        "Increased activity in the deep limbic areas of the brain.",
+        "Decreased activity in the PFC, commonly associated with low brain dopamine or norepinephrine levels."
+      ],
+      "characteristics": [
+        "Tend to use food or other substances to medicate underlying feelings of sadness and to calm the emotional storms in their brains.",
+        "Often struggle with feelings of boredom, loneliness, depression, low self-esteem, and pain issues.",
+        "May experience decreased libido, periods of crying, low energy levels, and lack of interest in usually pleasurable activities.",
+        "Struggle with feelings of guilt, helplessness, hopelessness, or worthlessness.",
+        "For some, feelings come and go with the seasons and tend to worsen in winter."
+      ],
+      "actionPlan": [
+        "Learn how to kill the ANTs (automatic negative thoughts).",
+        "Intense exercise.",
+        "A balanced diet between protein and complex carbohydrates.",
+        "Fish oil, such as Omega-3 Power.",
+        "Optimize vitamin D level.",
+        "Dietary supplement such as SAMe found in SAMe Mood & Movement Support."
+      ]
+    },
+    "Brain Type 4: Anxious": {
+      "spectFindings": [
+        "Increased activity in the basal ganglia, which is commonly caused by low levels of the calming neurotransmitter GABA."
+      ],
+      "characteristics": [
+        "Tend to use food or other substances to medicate underlying feelings of anxiety, tension, nervousness, and fear.",
+        "Plagued by feelings of panic, fear, and self-doubt.",
+        "May suffer physical symptoms of anxiety, such as muscle tension, nail biting, headaches, abdominal pain, heart palpitations, shortness of breath, and sore muscles."
+      ],
+      "actionPlan": [
+        "Learn how to kill the ANTs (automatic negative thoughts).",
+        "Meditation.",
+        "Hypnosis.",
+        "Diaphragmatic breathing.",
+        "Relaxing music.",
+        "Intense exercise.",
+        "A balanced diet between protein and complex carbohydrates.",
+        "Fish oil, such as Omega-3 Power.",
+        "Optimize vitamin D level.",
+        "Dietary supplements such as GABA, B6, magnesium and lemon balm found in GABA Calming Support."
+      ]
+    },
+    "Brain Type 5: Impulsive-Compulsive": {
+      "spectFindings": [
+        "Decreased activity in the PFC, commonly associated with low brain dopamine levels.",
+        "Increased anterior cingulate gyrus activity, commonly caused by low brain serotonin levels."
+      ],
+      "characteristics": [
+        "Have a combination of both impulsive and compulsive features.",
+        "Particularly common in the children and grandchildren of alcoholics or people who have a significant family history of alcoholism.",
+        "Common for people with bulimia."
+      ],
+      "actionPlan": [
+        "Learn how to distract yourself when you get a thought in your head more than three times.",
+        "Structured goal setting.",
+        "Intense exercise.",
+        "A balanced diet between complex carbohydrates and protein.",
+        "Fish oil, such as Omega-3 Power.",
+        "Optimize vitamin D level.",
+        "Natural ways to increase serotonin and dopamine include intense exercise, a balanced diet, and a combination of dietary supplements such as Serotonin Mood Support at night and Focus & Energy Optimizer in the morning and afternoon."
+      ]
+    },
+    "Brain Type 6: Compulsive-SAD": {
+      "spectFindings": [
+        "Increased activity in the anterior cingulate gyrus, which is commonly caused by low brain serotonin levels.",
+        "Increased activity in the deep limbic system.",
+        "Decreased activity in the prefrontal cortex, which is associated with low levels of dopamine and norepinephrine."
+      ],
+      "characteristics": [
+        "Have trouble shifting their attention.",
+        "Tend to dwell on worrisome or depressing thoughts.",
+        "May also get stuck on thoughts of food or eat as a way to medicate underlying feelings of sadness or depression."
+      ],
+      "actionPlan": [
+        "Learn how to distract yourself when you get a thought in your head more than three times.",
+        "Learn how to kill the ANTs (automatic negative thoughts).",
+        "Intense exercise.",
+        "A higher complex carbohydrate diet.",
+        "Fish oil, such as Omega-3 Power.",
+        "Optimize vitamin D level."
+      ]
+    },
+    "Brain Type 7: Compulsive-Anxious": {
+      "spectFindings": [
+        "Increased activity in the anterior cingulate gyrus, which is commonly caused by low brain serotonin levels.",
+        "Overactivity in the basal ganglia, which is associated with low levels of the calming neurotransmitter GABA."
+      ],
+      "characteristics": [
+        "Tend to get stuck on compulsive behaviors and anxious or fearful thoughts.",
+        "Have trouble shifting their attention from these thoughts.",
+        "Tend to use food or other substances to medicate their feelings of anxiety, tension, nervousness, and fear."
+      ],
+      "actionPlan": [
+        "Learn how to distract yourself when you get a thought in your head more than three times.",
+        "Learn how to kill the ANTs (automatic negative thoughts).",
+        "Meditation.",
+        "Hypnosis.",
+        "Diaphragmatic breathing.",
+        "Relaxing music.",
+        "Intense exercise.",
+        "A higher complex carbohydrate diet.",
+        "Fish oil, such as Omega-3 Power.",
+        "Optimize vitamin D level."
+      ]
+    },
+    "Brain Type 8: Compulsive-SAD-Anxious": {
+      "spectFindings": [
+        "Increased activity in the anterior cingulate gyrus, commonly caused by low brain serotonin levels.",
+        "Increased activity in the deep limbic system.",
+        "Decreased activity in the prefrontal cortex, associated with low levels of dopamine and norepinephrine.",
+        "Overactivity in the basal ganglia, commonly associated with low levels of the calming neurotransmitter GABA."
+      ],
+      "characteristics": [
+        "Have trouble shifting their attention.",
+        "Tend to get stuck on worrisome, depressing, anxious, or fearful thoughts.",
+        "Tend to use food or other substances to medicate their feelings of sadness, depression, anxiety, tension, nervousness, fear, panic, self-doubt, boredom, loneliness, low self-esteem, guilt, helplessness, hopelessness, or worthlessness."
+      ],
+      "actionPlan": [
+        "Learn how to distract yourself when you get a thought in your head more than three times.",
+        "Learn how to kill the ANTs (automatic negative thoughts).",
+        "Meditation.",
+        "Hypnosis.",
+        "Diaphragmatic breathing.",
+        "Relaxing music.",
+        "Intense exercise.",
+        "A balanced diet.",
+        "Fish oil, such as Omega-3 Power.",
+        "Optimize vitamin D level."
+      ]
+    },
+    "Brain Type 9: Impulsive-SAD": {
+      "spectFindings": [
+        "Decreased activity in the PFC, commonly associated with low brain dopamine and norepinephrine levels.",
+        "Increased activity in the deep limbic areas of the brain."
+      ],
+      "characteristics": [
+        "Struggle with feelings of sadness combined with impulsive behavior.",
+        "May start each day with good intentions, but when feelings of boredom, loneliness, depression, low self-esteem, guilt, helplessness, hopelessness, or worthlessness come up, they have trouble controlling their behavior and tend to use food or other substances to medicate their feelings."
+      ],
+      "actionPlan": [
+        "Structured goal setting.",
+        "Learn how to kill the ANTs (automatic negative thoughts).",
+        "Intense exercise.",
+        "A higher protein diet.",
+        "Fish oil, such as Omega-3 Power.",
+        "Optimize vitamin D level."
+      ]
+    },
+    "Brain Type 10: Impulsive-Anxious": {
+      "spectFindings": [
+        "Decreased activity in the PFC, commonly associated with low brain dopamine levels.",
+        "Overactivity in the basal ganglia."
+      ],
+      "characteristics": [
+        "Struggle with feelings of anxiety combined with impulsive behavior.",
+        "May start each day with good intentions, but when feelings of anxiety, tension, nervousness, fear, panic, or self-doubt come up, they have trouble controlling their behavior and tend to use food or other substances to medicate their feelings."
+      ],
+      "actionPlan": [
+        "Structured goal setting.",
+        "Learn how to kill the ANTs (automatic negative thoughts).",
+        "Meditation.",
+        "Hypnosis.",
+        "Diaphragmatic breathing.",
+        "Relaxing music.",
+        "Intense exercise.",
+        "A balanced diet between high-quality protein and high-quality carbohydrates.",
+        "Fish oil, such as Omega-3 Power.",
+        "Optimize vitamin D level."
+      ]
+    },
+    "Brain Type 11: Impulsive-SAD-Anxious": {
+      "spectFindings": [
+        "Decreased activity in the PFC, commonly associated with low brain dopamine and norepinephrine levels.",
+        "Increased activity in the deep limbic areas of the brain.",
+        "Overactivity in the basal ganglia, associated with low GABA levels."
+      ],
+      "characteristics": [
+        "Struggle with feelings of sadness and anxiety combined with impulsive behavior.",
+        "May start each day with good intentions, but when feelings of anxiety, depression, boredom, loneliness, low self-esteem, tension, nervousness, fear, panic, self-doubt, guilt, helplessness, hopelessness, or worthlessness come up, they have trouble controlling their behavior."
+      ],
+      "actionPlan": [
+        "Structured goal setting.",
+        "Learn how to kill the ANTs (automatic negative thoughts).",
+        "Meditation.",
+        "Hypnosis.",
+        "Diaphragmatic breathing.",
+        "Relaxing music.",
+        "Intense exercise.",
+        "A balanced diet between high-quality protein and high-quality carbohydrates.",
+        "Fish oil, such as Omega-3 Power.",
+        "Optimize vitamin D level."
+      ]
+    },
+    "Brain Type 12: Impulsive-Compulsive-SAD": {
+      "spectFindings": [
+        "Decreased activity in the PFC, commonly associated with low brain dopamine and norepinephrine levels.",
+        "Increased activity in the anterior cingulate gyrus, commonly caused by low brain serotonin levels.",
+        "Increased activity in the deep limbic areas of the brain."
+      ],
+      "characteristics": [
+        "Struggle with feelings of sadness, poor impulse control, and compulsive tendencies.",
+        "Have trouble shifting their attention."
+      ],
+      "actionPlan": [
+        "Learn how to distract yourself when you get a thought in your head more than three times.",
+        "Structured goal setting.",
+        "Learn how to kill the ANTs (automatic negative thoughts).",
+        "Intense exercise.",
+        "A balanced diet between high-quality protein and high-quality carbohydrates.",
+        "Fish oil, such as Omega-3 Power.",
+        "Optimize vitamin D level."
+      ]
+    },
+    "Brain Type 13: Impulsive-Compulsive-Anxious": {
+      "spectFindings": [
+        "Decreased activity in the PFC, commonly associated with low brain dopamine levels.",
+        "Increased activity in the anterior cingulate gyrus, commonly caused by low brain serotonin levels.",
+        "Increased activity in the basal ganglia, commonly associated with low GABA levels."
+      ],
+      "characteristics": [
+        "Struggle with feelings of anxiety, poor impulse control, and compulsive tendencies.",
+        "Have trouble shifting their attention."
+      ],
+      "actionPlan": [
+        "Learn how to distract yourself when you get a thought in your head more than three times.",
+        "Structured goal setting.",
+        "Learn how to kill the ANTs (automatic negative thoughts).",
+        "Meditation.",
+        "Hypnosis.",
+        "Diaphragmatic breathing.",
+        "Relaxing music.",
+        "Intense exercise.",
+        "A balanced diet between high-quality protein and high-quality carbohydrates.",
+        "Fish oil, such as Omega-3 Power.",
+        "Optimize vitamin D level."
+      ]
+    },
+    "Brain Type 14: Impulsive-Compulsive-SAD-Anxious": {
+      "spectFindings": [
+        "Decreased activity in the PFC, commonly associated with low brain dopamine and norepinephrine levels.",
+        "Increased activity in the anterior cingulate gyrus, commonly caused by low brain serotonin levels.",
+        "Increased activity in the deep limbic areas of the brain.",
+        "Overactivity in the basal ganglia, commonly associated with low GABA levels."
+      ],
+      "characteristics": [
+        "Struggle with feelings of anxiety and depression, poor impulse control, and compulsive tendencies.",
+        "Have trouble shifting their attention."
+      ],
+      "actionPlan": [
+        "Learn how to distract yourself when you get a thought in your head more than three times.",
+        "Structured goal setting.",
+        "Learn how to kill the ANTs (automatic negative thoughts).",
+        "Meditation.",
+        "Hypnosis.",
+        "Diaphragmatic breathing.",
+        "Relaxing music.",
+        "Intense exercise.",
+        "A balanced diet between high-quality protein and high-quality carbohydrates.",
+        "Fish oil, such as Omega-3 Power.",
+        "Optimize vitamin D level."
+      ]
+    },
+    "Brain Type 15: SAD-Anxious": {
+      "spectFindings": [
+        "Increased activity in the deep limbic areas of the brain.",
+        "Decreased activity in the PFC, commonly associated with low brain dopamine and norepinephrine levels.",
+        "Overactivity in the basal ganglia, commonly associated with low GABA levels."
+      ],
+      "characteristics": [
+        "Tend to use food or other substances to medicate underlying feelings of anxiety and sadness and to calm the emotional storms in their brains."
+      ],
+      "actionPlan": [
+        "Learn how to kill the ANTs (automatic negative thoughts).",
+        "Meditation.",
+        "Hypnosis.",
+        "Relaxing music.",
+        "Intense exercise.",
+        "A balanced diet between protein and complex carbohydrates.",
+        "Fish oil, such as Omega-3 Power.",
+        "Optimize vitamin D level.",
+        "Dietary supplements such as SAMe and GABA found in SAMe Mood & Movement Support and GABA Calming Support."
+      ]
+    },
+    "Brain Type 16: No Brain Type": {
+      "spectFindings": [
+        "Some people do not have a brain type, or they are not insightful and need someone else who knows them well to fill out the questionnaire."
+      ],
+      "characteristics": [
+        "If you do not have a brain type, use all the other strategies in The Amen Solution to have the brain and body you have always wanted."
+      ],
+      "actionPlan": []
+    }
+  }
+}
